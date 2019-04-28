@@ -1,9 +1,11 @@
-array = ["Tim Jones", "Tom Smith", "Jim Campagno"]
-my_collect(array) do |name|
-  name.split(" ").first
-end
-
-collection = ['ruby', 'javascript', 'python', 'objective-c']
-my_collect(collection) do |lang|
-  lang.upcase
-end
+students = ['Tim Jones', 'Tom Smith', 'Sophie Johnson', 'Antoin Miller']
+def my_collect(students) do |student|
+  i = 0
+  collect = []
+  while i < students.length
+    collect << yield(students[i])
+    i + 1
+  end 
+  collect
+end   
+  
