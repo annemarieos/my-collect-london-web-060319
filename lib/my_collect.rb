@@ -5,7 +5,6 @@ def my_collect(students) do |student|
   while i < students.length
     collect << yield(students[i])
     i + 1
-  end 
+  end
   collect
 end   
-  
